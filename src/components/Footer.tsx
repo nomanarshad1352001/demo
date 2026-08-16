@@ -1,152 +1,66 @@
-import { Mail, Phone, MapPin, Globe, MessageCircle } from "lucide-react";
-
-const footerLinks = [
-  { label: "Why Us", href: "#why-us" },
-  { label: "Specifications", href: "#specifications" },
-  { label: "Products", href: "#products" },
-  { label: "Materials", href: "#materials" },
-  { label: "Inquire", href: "#inquire" },
-];
-
-const productLinks = [
-  "Crew & Ankle Socks",
-  "Sports & Compression",
-  "Dress Socks",
-  "Kids & Infant Socks",
-  "Wool & Bamboo Blends",
-  "Custom Jacquard",
-];
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-charcoal-900 text-charcoal-300">
-      {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand column */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4">
-              <span className="text-2xl font-black text-white tracking-wider">
-                INDUS LOOM
-              </span>
-              <div className="text-xs text-gold-400 tracking-[0.15em] font-medium mt-1">
-                SOCKS &amp; HOSIERY DIVISION
-              </div>
+    <footer className="bg-gray-900 text-gray-300 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
-            <p className="text-sm text-charcoal-400 leading-relaxed mb-6">
-              Computerised jacquard knitting, seamless construction, and
-              full-scale sizing from infant to XXL — all from Karachi, Pakistan.
-            </p>
-            <div className="flex gap-3">
-              <span className="px-3 py-1 bg-charcoal-800 border border-charcoal-700 rounded-full text-xs font-semibold text-charcoal-300">
-                OEKO-TEX
-              </span>
-              <span className="px-3 py-1 bg-charcoal-800 border border-charcoal-700 rounded-full text-xs font-semibold text-charcoal-300">
-                Sedex
-              </span>
-            </div>
+            <span className="text-lg font-bold text-white">TireRack Pro</span>
           </div>
-
-          {/* Quick links */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-charcoal-400 hover:text-gold-400 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Products */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
-              Products
-            </h4>
-            <ul className="space-y-3">
-              {productLinks.map((product) => (
-                <li key={product}>
-                  <span className="text-sm text-charcoal-400">
-                    {product}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wider uppercase">
-              Contact &amp; Export
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-gold-400 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-charcoal-400">
-                  INDUS LOOM — Karachi, Pakistan
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-gold-400 mt-0.5 flex-shrink-0" />
-                <a
-                  href="mailto:export@indusloom.com"
-                  className="text-sm text-charcoal-400 hover:text-gold-400 transition-colors"
-                >
-                  export@indusloom.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-gold-400 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-charcoal-400">
-                  +92 XXX XXX XXXX
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <MessageCircle
-                  size={16}
-                  className="text-gold-400 mt-0.5 flex-shrink-0"
-                />
-                <span className="text-sm text-charcoal-400">
-                  WhatsApp: +92 XXX XXX XXXX
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Globe size={16} className="text-gold-400 mt-0.5 flex-shrink-0" />
-                <a
-                  href="https://www.indusloom.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-charcoal-400 hover:text-gold-400 transition-colors"
-                >
-                  www.indusloom.com
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p className="text-sm text-gray-400">
+            Your trusted source for premium tires. Shop by vehicle or tire size with confidence.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold text-white mb-4">Shop</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/shop" className="hover:text-white transition">All Tires</Link></li>
+            <li><Link href="/shop?season=all-season" className="hover:text-white transition">All-Season</Link></li>
+            <li><Link href="/shop?season=summer" className="hover:text-white transition">Summer</Link></li>
+            <li><Link href="/shop?season=winter" className="hover:text-white transition">Winter</Link></li>
+            <li><Link href="/brands" className="hover:text-white transition">Brands</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-white mb-4">Customer Service</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/account" className="hover:text-white transition">My Account</Link></li>
+            <li><Link href="/account/orders" className="hover:text-white transition">Order History</Link></li>
+            <li><Link href="/cart" className="hover:text-white transition">Shopping Cart</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold text-white mb-4">Contact</h3>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              1-800-TIRES-00
+            </li>
+            <li className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              support@tirerakpro.com
+            </li>
+            <li className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Mon-Fri 8am-8pm EST
+            </li>
+          </ul>
         </div>
       </div>
-
-      {/* Bottom bar */}
-      <div className="border-t border-charcoal-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-charcoal-500">
-            &copy; {new Date().getFullYear()} INDUS LOOM. All rights reserved.
-            Crafted on the Indus, delivered worldwide.
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="text-xs text-charcoal-600">
-              CREW &bull; SPORT &bull; DRESS &bull; KIDS
-            </span>
-          </div>
-        </div>
+      <div className="border-t border-gray-800 px-4 py-6 text-center text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} TireRack Pro. All rights reserved.</p>
       </div>
     </footer>
   );
